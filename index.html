@@ -81,19 +81,26 @@
 </section>
 
 <!-- ============ TOURNAMENT TEASER ============ -->
+<!--
+  MAINTENANCE NOTE: this card should always mirror the current
+  "Upcoming Tournaments" entry in tournaments.html. When that
+  page is updated, update this teaser to match (or change to
+  the "no tournament" placeholder text if there's nothing
+  upcoming). The whole card links through to tournaments.html.
+-->
 <section class="section section-dark">
   <div class="section-head">
     <h2><span class="num">02</span> Next Tournament</h2>
     <a href="tournaments.html" class="see-all">Full schedule &rarr;</a>
   </div>
-  <div class="tournament-card-full">
+  <a href="tournaments.html" class="tournament-card-full" style="text-decoration:none;color:inherit;">
     <div class="tournament-info">
-      <p class="tournament-tag">UPCOMING &middot; OPEN CATEGORY</p>
-      <h3>Smash City Open &mdash; [Placeholder Name]</h3>
+      <p class="tournament-tag">OPEN &middot; UPCOMING</p>
+      <h3>[Tournament Name Placeholder]</h3>
       <p class="tournament-meta">📍 [Venue placeholder] &nbsp;&middot;&nbsp; 🗓 [Date placeholder]</p>
-      <p class="tournament-meta">Registration opens [date placeholder] &mdash; details on the Tournaments page.</p>
+      <p class="tournament-meta">Registration opens [date placeholder]. <span style="text-decoration:underline;">See full details &rarr;</span></p>
     </div>
-  </div>
+  </a>
 </section>
 
 <!-- ============ SPONSORS STRIP ============ -->
@@ -132,8 +139,12 @@
     <a href="https://instagram.com/gzd_badminton" target="_blank" rel="noopener" class="see-all">@gzd_badminton &rarr;</a>
   </div>
   <div id="instagram-feed-embed">
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-af84a772-4a14-4b21-99ab-a908e9b5b42b" data-elfsight-app-lazy></div>
+    <!--
+      Paste your Instagram widget embed snippet (from Elfsight,
+      LightWidget, SociableKIT, etc.) directly inside this div,
+      replacing the placeholder text below.
+    -->
+    <p class="loading-msg">Instagram feed widget goes here once connected.</p>
   </div>
 </section>
 

@@ -48,7 +48,7 @@ There's a placeholder section on the homepage (`<div id="instagram-feed-embed">`
 This widget connection is a one-time setup and isn't affected by the rest of the site being static — once connected, the feed itself updates automatically as new posts go up.
 
 ## Contact form (Contact page)
-There's a placeholder for an embedded form (`<div id="contact-form-wrap">` in `contact.html`). To connect a real Google Form: create the form, Send → `<>` Embed HTML, copy the `<iframe>` tag, and paste it directly inside that div, replacing the placeholder message.
+There's a button placeholder (`<div id="contact-form-wrap">` in `contact.html`) that opens a Google Form in a new tab. Once the form exists, replace the `href="#"` on that button with the real form link.
 
 ## Hosting
 Push this folder to a GitHub repo, enable GitHub Pages, then add a `CNAME` file with the custom domain once it's purchased and point the registrar's DNS at GitHub Pages.
