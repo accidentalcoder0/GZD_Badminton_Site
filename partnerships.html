@@ -30,15 +30,14 @@
 </div>
 
 <!-- ============ HEADER / NAV ============ -->
-<input type="checkbox" id="nav-toggle" class="nav-toggle-input">
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">
       <img src="assets/images/club-wordmark.png" alt="GZD Badminton" class="logo-img">
     </a>
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+    <button id="nav-toggle-btn" class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
-    </label>
+    </button>
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -98,5 +97,6 @@
   <p class="footer-copyright">&copy; 2024 GZD Badminton Club. All rights reserved.</p>
 </footer>
 
+<script src="js/nav.js"></script>
 </body>
 </html>
