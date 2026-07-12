@@ -1,54 +1,73 @@
-# Smash City Badminton Club — Website
+# GZD Badminton Club — Website
 
-This is a fully static site: plain HTML and CSS, no JavaScript, no Google Sheets, no CMS. Every piece of content lives directly in the HTML files. Updating anything means editing the relevant file by hand and redeploying — there's no self-service path for the organiser; all changes go through whoever maintains the code.
+Official website for GZD Badminton Club, Manchester. Built as a fully static site (plain HTML and CSS, no JavaScript frameworks, no CMS) and hosted on GitHub Pages.
 
-## What's here
+## Pages
+
+| Page | File | Notes |
+|---|---|---|
+| Home | `index.html` | Hero, announcements teaser, tournament teaser, sponsors, partners, location, Instagram feed |
+| About | `about.html` | Club story, milestones, mission, organiser bio |
+| Announcements | `announcements.html` | Full announcements list |
+| Tournaments | `tournaments.html` | Upcoming tournament + past results |
+| Leagues | `leagues.html` | League play info, play grades guide |
+| Sponsors | `sponsors.html` | VP Racket Sports, Uplift Physio |
+| Partnerships | `partnerships.html` | British Heart Foundation, Manchester ANC |
+| Location | `location.html` | Current and seasonal venues with maps |
+| Contact | `contact.html` | WhatsApp, Instagram, Email |
+
+## Structure
+
 ```
 /
-├── index.html              — homepage
-├── about.html              — club story, mission, organiser
-├── announcements.html      — full announcements list
-├── tournaments.html        — upcoming + past tournaments (manually maintained)
-├── sponsors.html           — sponsors grouped by tier
-├── location.html           — venue details + map(s)
-├── contact.html            — direct contact links + optional embedded form
-├── README.md
+├── index.html
+├── about.html
+├── announcements.html
+├── tournaments.html
+├── leagues.html
+├── sponsors.html
+├── partnerships.html
+├── location.html
+├── contact.html
 ├── css/
-│   └── styles.css          — all styling
+│   └── styles.css
 └── assets/
-    └── images/             — logos, sponsor images, gallery photos go here
+    ├── GZD_Play_Grades_Guide.pdf
+    └── images/
+        ├── club-wordmark.png       — header logo (all pages)
+        ├── club-badge.png          — footer logo + favicon (all pages)
+        ├── VP_Logo_RS_Horizontal.png
+        ├── Uplift_physio_logo.webp
+        ├── BHF-logo-desktop.svg
+        └── Manchester_ANC_logo.jpg
 ```
 
-## How to update content
-There's no data layer — every page is hand-written HTML. To change something:
+## Updating content
 
-- **Announcements**: edit the `.announcement-card` blocks in `index.html` (teaser) and `announcements.html` (full list). Add or remove a card by copying the existing block structure.
-- **Tournaments**: edit `tournaments.html`. When a tournament's date passes, manually cut its card from the "Upcoming Tournaments" section and paste it into "Past Results," adding the result text. No automatic logic does this for you.
-- **Sponsors**: edit `sponsors.html`. Each tier is a `<div class="sponsor-tier">` block containing a `<div class="sponsor-grid">` of `.sponsor-card` entries.
-- **Location**: edit `location.html`. If the club plays at different venues across the year, manually move venue cards between "Where We Play Right Now" and "Other Venues" when the season changes.
-- **About**: edit `about.html` directly — story, mission, and organiser bio are plain paragraphs.
-- **Contact info (WhatsApp/Instagram/Email)**: this is the one thing repeated across *every* page (top contact strip + footer on all 7 pages, plus the contact cards on `contact.html`). If this changes, it needs to be updated in all of those places — there's no single source of truth for it in this static setup.
+Everything is hand-written HTML. There is no CMS or database. To update content, edit the relevant `.html` file directly and push.
 
-## Images
-Drop logo/sponsor/gallery images into `assets/images/`, then reference them with a relative path (e.g. `assets/images/sponsor-logo.png`) in the relevant `<img>` tag, replacing the dashed `.sponsor-slot` placeholder divs.
+Common tasks:
 
-**Currently wired in:**
-- `assets/images/club-wordmark.png` — header logo (every page)
-- `assets/images/club-badge.png` — footer logo (every page) + browser tab favicon
-- `assets/images/VP_Logo_RS_Horizontal.png` — sponsor logo (homepage strip + Sponsors page)
-
-If any of these filenames change, update the corresponding `<img src="...">` references across all 7 HTML files (search for the filename to find every occurrence).
-
-## Instagram feed (homepage)
-There's a placeholder section on the homepage (`<div id="instagram-feed-embed">`) ready for a live Instagram feed widget. Instagram itself only allows embedding single posts one at a time — to show a live, auto-updating feed of recent posts, use a free third-party widget:
-- **Elfsight**, **LightWidget**, or **SociableKIT** all offer free tiers
-- Sign up, connect the club's public Instagram account (may require a one-time login if it's a Business/Creator account), and copy the embed snippet they give you
-- Paste that snippet directly inside the `<div id="instagram-feed-embed">` in `index.html`, replacing the placeholder `<p>`
-
-This widget connection is a one-time setup and isn't affected by the rest of the site being static — once connected, the feed itself updates automatically as new posts go up.
-
-## Contact form (Contact page)
-There's a button placeholder (`<div id="contact-form-wrap">` in `contact.html`) that opens a Google Form in a new tab. Once the form exists, replace the `href="#"` on that button with the real form link.
+- **New announcement** - add an `.announcement-card` block in `announcements.html` and update the teaser card in `index.html`
+- **New tournament** - add a card to the Upcoming section in `tournaments.html` and mirror it in `index.html`; once the date passes, move it to Past Results and add the result
+- **Registration opens** - in `tournaments.html`, swap the grey `<span>` button for an active `<a>` tag linking to the registration form
+- **Location changes** - in `location.html`, move venue cards between "Where We Play Right Now" and "Other Venues" sections manually when the season changes
+- **New sponsor/partner** - add a `.sponsor-card` block in `sponsors.html` or `partnerships.html` and add the logo to `assets/images/`
+- **Contact info changes** - WhatsApp, Instagram, and email appear in the contact strip and footer on every page; search for the old value across all HTML files and replace
 
 ## Hosting
-Push this folder to a GitHub repo, enable GitHub Pages, then add a `CNAME` file with the custom domain once it's purchased and point the registrar's DNS at GitHub Pages.
+
+Hosted on GitHub Pages. The site is served from the `main` branch root.
+
+To connect a custom domain once purchased:
+1. Add a `CNAME` file to the repo root containing just the domain name (e.g. `gzdbadminton.co.uk`)
+2. Add the required DNS records at the registrar (see the Domain Setup Guide)
+3. Enable HTTPS in repo Settings - Pages
+
+## Pending (waiting on organiser)
+
+- Transparent VP Racket Sports logo
+- Tournament result photos (to replace "Photos coming soon" placeholders in `tournaments.html`)
+- British Heart Foundation and Manchester ANC partner details/blurbs
+- Google Form link for Contact page query form (once created, add to `contact.html`)
+- Elfsight Instagram widget monthly view limit - organiser to review if needed
