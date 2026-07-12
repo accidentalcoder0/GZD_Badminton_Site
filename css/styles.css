@@ -35,7 +35,7 @@ a{color:inherit;text-decoration:none;}
 h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-transform:uppercase;}
 
 /* ===== Contact strip ===== */
-.contact-strip{background:var(--court-indigo);color:var(--shuttle-white);font-family:'Space Mono',monospace;font-size:0.78rem;}
+.contact-strip{background:var(--court-indigo);color:var(--shuttle-white);font-family:'Space Mono',monospace;font-size:0.78rem;padding-bottom:4px;}
 .contact-strip-inner{max-width:var(--max-w);margin:0 auto;padding:8px 24px;display:flex;gap:24px;flex-wrap:wrap;}
 .contact-link{display:inline-flex;align-items:center;gap:6px;opacity:0.9;}
 .contact-link:hover{opacity:1;color:var(--volt);}
@@ -46,7 +46,7 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 
 /* ===== Header ===== */
 .site-header{background:var(--shuttle-white);position:sticky;top:0;z-index:50;border-bottom:3px solid var(--court-indigo);}
-.header-inner{max-width:var(--max-w);margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.header-inner{max-width:var(--max-w);margin:0 auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .logo{font-family:'Anton',sans-serif;font-size:1.3rem;letter-spacing:0.03em;display:flex;align-items:center;gap:8px;}
 .logo-img{height:34px;width:auto;display:block;}
 .main-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.03em;}
@@ -175,17 +175,40 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .site-footer{background:var(--court-indigo);color:var(--shuttle-white);padding:48px 24px 24px;}
 .footer-inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
 .footer-logo{margin-bottom:10px;}
-.footer-logo-img{height:72px;width:auto;display:block;}
+.footer-logo-img{height:100px;width:auto;display:block;}
 .footer-tagline{color:#C9CCDB;max-width:320px;font-size:0.9rem;}
 .footer-contact{display:flex;flex-direction:column;gap:8px;font-family:'Space Mono',monospace;font-size:0.85rem;}
 .footer-contact a:hover{color:var(--volt);}
 .footer-copyright{max-width:var(--max-w);margin:32px auto 0;font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--line-grey);border-top:1px solid rgba(247,247,242,0.15);padding-top:16px;}
 
-/* ===== Responsive ===== */
-@media (max-width:640px){
-  .main-nav{font-size:0.75rem;gap:14px;}
-  .tournament-card-full{padding:20px;}
+/* ===== Hamburger menu (CSS-only, no JS) ===== */
+.nav-toggle-input{display:none;}
+.nav-toggle-label{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;z-index:100;}
+.nav-toggle-label span{display:block;width:24px;height:2px;background:var(--court-indigo);border-radius:2px;transition:transform 0.2s,opacity 0.2s;}
+
+@media (max-width:860px){
+  .nav-toggle-label{display:flex;}
+  .main-nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0;right:0;
+    background:var(--shuttle-white);
+    border-top:3px solid var(--court-indigo);
+    border-bottom:3px solid var(--court-indigo);
+    padding:16px 24px 20px;
+    gap:14px;
+    z-index:99;
+    box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  }
+  .nav-toggle-input:checked ~ .header-inner .main-nav{display:flex;}
+  .nav-toggle-input:checked ~ .header-inner .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle-input:checked ~ .header-inner .nav-toggle-label span:nth-child(2){opacity:0;}
+  .nav-toggle-input:checked ~ .header-inner .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .header-inner{position:relative;flex-wrap:nowrap;}
   .logo-img{height:22px;}
+  .tournament-card-full{padding:20px;}
 }
 
 @media (max-width:380px){
@@ -199,3 +222,39 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 
 /* ===== Focus visibility ===== */
 a:focus-visible,button:focus-visible{outline:3px solid var(--smash-orange);outline-offset:2px;}
+/* ===== Contact strip icons ===== */
+.contact-link svg{flex-shrink:0;}
+
+/* ===== About page milestones ===== */
+.milestones{margin-top:24px;}
+.milestone-list{list-style:none;padding:0;margin:10px 0 0;}
+.milestone-list li{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid rgba(27,31,59,0.1);font-size:0.9rem;line-height:1.4;}
+.milestone-list li:last-child{border-bottom:none;}
+.milestone-year{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--smash-orange);font-weight:700;min-width:64px;padding-top:1px;}
+
+/* ===== Tournament result blocks ===== */
+.result-block{margin-top:10px;}
+.result-text{margin:4px 0;font-weight:700;font-size:0.9rem;}
+.result-2nd{color:#C9CCDB;}
+.result-3rd{color:#C9CCDB;font-weight:400;}
+.section-dark .result-2nd,.section-dark .result-3rd{color:#8A8FA3;}
+
+/* ===== Leagues page grade cards ===== */
+.grades-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:28px;}
+.grade-card{background:var(--court-indigo);border:1px solid rgba(212,255,61,0.25);border-radius:6px;padding:16px;display:flex;gap:14px;align-items:flex-start;}
+.grade-card-full-width{grid-column:1/-1;}
+.grade-code{font-family:'Anton',sans-serif;font-size:1.1rem;color:var(--volt);min-width:44px;padding-top:2px;}
+.grade-label{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--smash-orange);font-weight:700;text-transform:uppercase;margin:0 0 6px;letter-spacing:0.04em;}
+.grade-body p{margin:0;font-size:0.85rem;color:#C9CCDB;line-height:1.5;}
+.grades-note{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--line-grey);margin-top:20px;font-style:italic;}
+
+/* ===== Tournament photo placeholder ===== */
+.tournament-photo-placeholder{
+  min-width:200px;flex:1;border:2px dashed rgba(212,255,61,0.3);
+  border-radius:6px;display:flex;align-items:center;justify-content:center;
+  padding:24px;min-height:120px;
+}
+.tournament-photo-placeholder p{
+  font-family:'Space Mono',monospace;font-size:0.75rem;
+  color:var(--line-grey);margin:0;text-align:center;
+}
