@@ -202,10 +202,10 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
     z-index:99;
     box-shadow:0 8px 24px rgba(0,0,0,0.12);
   }
-  .nav-toggle-input:checked ~ .header-inner .main-nav{display:flex;}
-  .nav-toggle-input:checked ~ .header-inner .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .nav-toggle-input:checked ~ .header-inner .nav-toggle-label span:nth-child(2){opacity:0;}
-  .nav-toggle-input:checked ~ .header-inner .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .nav-toggle-input:checked ~ .site-header .main-nav{display:flex;}
+  .nav-toggle-input:checked ~ .site-header .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle-input:checked ~ .site-header .nav-toggle-label span:nth-child(2){opacity:0;}
+  .nav-toggle-input:checked ~ .site-header .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
   .header-inner{position:relative;flex-wrap:nowrap;}
   .logo-img{height:22px;}
   .tournament-card-full{padding:20px;}
