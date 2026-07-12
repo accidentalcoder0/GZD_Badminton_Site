@@ -2,5 +2,8 @@
 *.docx
 *.doc
 
+# PDFs (except site assets)
+GZD_Badminton_Site_Quote.pdf
+
 # Details folder
 Details/
