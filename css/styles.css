@@ -181,13 +181,13 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .footer-contact a:hover{color:var(--volt);}
 .footer-copyright{max-width:var(--max-w);margin:32px auto 0;font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--line-grey);border-top:1px solid rgba(247,247,242,0.15);padding-top:16px;}
 
-/* ===== Hamburger menu (CSS-only, no JS) ===== */
+/* ===== Hamburger menu ===== */
 .nav-toggle-input{display:none;}
-.nav-toggle-label{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;z-index:100;}
-.nav-toggle-label span{display:block;width:24px;height:2px;background:var(--court-indigo);border-radius:2px;transition:transform 0.2s,opacity 0.2s;}
+.nav-toggle-btn{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:100;}
+.nav-toggle-btn span{display:block;width:24px;height:2px;background:var(--court-indigo);border-radius:2px;transition:transform 0.2s,opacity 0.2s;}
 
 @media (max-width:860px){
-  .nav-toggle-label{display:flex;}
+  .nav-toggle-btn{display:flex;}
   .main-nav{
     display:none;
     flex-direction:column;
@@ -202,10 +202,10 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
     z-index:99;
     box-shadow:0 8px 24px rgba(0,0,0,0.12);
   }
-  .nav-toggle-input:checked ~ .site-header .main-nav{display:flex;}
-  .nav-toggle-input:checked ~ .site-header .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .nav-toggle-input:checked ~ .site-header .nav-toggle-label span:nth-child(2){opacity:0;}
-  .nav-toggle-input:checked ~ .site-header .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .main-nav.nav-open{display:flex;}
+  .nav-toggle-btn.nav-toggle-active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle-btn.nav-toggle-active span:nth-child(2){opacity:0;}
+  .nav-toggle-btn.nav-toggle-active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
   .header-inner{position:relative;flex-wrap:nowrap;}
   .logo-img{height:22px;}
   .tournament-card-full{padding:20px;}
