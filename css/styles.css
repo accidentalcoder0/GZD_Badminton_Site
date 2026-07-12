@@ -258,3 +258,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--smash-orange);outli
   font-family:'Space Mono',monospace;font-size:0.75rem;
   color:var(--line-grey);margin:0;text-align:center;
 }
+
+/* ===== Justified prose (desktop only, avoids river effect on mobile) ===== */
+@media (min-width:480px){
+  .announcement-card p,
+  .prose p,
+  .grade-body p{
+    text-align:justify;
+  }
+}
