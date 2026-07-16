@@ -207,12 +207,12 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
   .nav-toggle-btn.nav-toggle-active span:nth-child(2){opacity:0;}
   .nav-toggle-btn.nav-toggle-active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
   .header-inner{position:relative;flex-wrap:nowrap;}
-  .logo-img{height:34px;}
+  .logo-img{height:26px;}
   .tournament-card-full{padding:20px;}
 }
 
 @media (max-width:380px){
-  .logo-img{height:28px;}
+  .logo-img{height:22px;}
 }
 
 /* ===== Reduced motion ===== */
