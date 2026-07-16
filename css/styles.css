@@ -45,10 +45,10 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .dot-mail{background:var(--volt);}
 
 /* ===== Header ===== */
-.site-header{background:var(--shuttle-white);position:sticky;top:0;z-index:50;border-bottom:3px solid var(--court-indigo);}
+.site-header{background:var(--shuttle-white);border-bottom:3px solid var(--court-indigo);}
 .header-inner{max-width:var(--max-w);margin:0 auto;padding:32px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .logo{font-family:'Anton',sans-serif;font-size:1.3rem;letter-spacing:0.03em;display:flex;align-items:center;gap:8px;}
-.logo-img{height:34px;width:auto;display:block;}
+.logo-img{height:70px;width:auto;display:block;}
 .main-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.03em;}
 .main-nav a{padding:6px 0;border-bottom:2px solid transparent;}
 .main-nav a:hover,.main-nav a.active{border-bottom-color:var(--smash-orange);}
@@ -207,12 +207,12 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
   .nav-toggle-btn.nav-toggle-active span:nth-child(2){opacity:0;}
   .nav-toggle-btn.nav-toggle-active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
   .header-inner{position:relative;flex-wrap:nowrap;}
-  .logo-img{height:22px;}
+  .logo-img{height:34px;}
   .tournament-card-full{padding:20px;}
 }
 
 @media (max-width:380px){
-  .logo-img{height:18px;}
+  .logo-img{height:28px;}
 }
 
 /* ===== Reduced motion ===== */
