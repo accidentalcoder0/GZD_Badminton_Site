@@ -269,54 +269,54 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--smash-orange);outli
 }
 
 /* ===== Sponsor/partner hover cards ===== */
+a.sponsor-card,
+.sponsor-strip a{position:relative;}
 
-/* Full sponsor cards (Sponsors + Partnerships pages) */
-a.sponsor-card{
-  transition:transform 0.22s ease,box-shadow 0.22s ease,border-color 0.22s ease,background 0.22s ease;
-}
-a.sponsor-card:hover{
-  transform:translateY(-8px) scale(1.03);
-  box-shadow:0 24px 48px rgba(27,31,59,0.22),0 4px 12px rgba(27,31,59,0.1);
-  border-color:var(--volt);
-  background:var(--court-indigo);
-  color:var(--shuttle-white);
-}
-a.sponsor-card:hover h4{color:var(--volt);}
-a.sponsor-card:hover .sponsor-blurb{color:#C9CCDB;}
-
-/* Homepage/strip logo links — card pops up below the logo on hover */
-.strip-link{
-  display:inline-flex;
-  flex-direction:column;
-  align-items:center;
-  position:relative;
-  transition:transform 0.22s ease;
-}
-.strip-link:hover{transform:translateY(-5px);}
-
-.strip-link::after{
-  content:attr(data-name);
+a.sponsor-card::after,
+.sponsor-strip a::after{
+  content:'Visit website \2192';
   position:absolute;
-  top:calc(100% + 10px);
+  bottom:calc(100% + 8px);
   left:50%;
-  transform:translateX(-50%) scale(0.92);
-  transform-origin:top center;
+  transform:translateX(-50%) translateY(6px);
   background:var(--court-indigo);
   color:var(--volt);
   font-family:'Space Mono',monospace;
   font-size:0.72rem;
   font-weight:700;
-  padding:8px 14px;
-  border-radius:6px;
+  padding:6px 12px;
+  border-radius:4px;
   white-space:nowrap;
   opacity:0;
   pointer-events:none;
-  transition:opacity 0.18s ease,transform 0.18s ease;
-  box-shadow:0 8px 20px rgba(27,31,59,0.25);
-  z-index:30;
-  letter-spacing:0.03em;
+  transition:opacity 0.15s ease,transform 0.15s ease;
+  z-index:20;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
-.strip-link:hover::after{
+
+a.sponsor-card:hover::after,
+.sponsor-strip a:hover::after{
   opacity:1;
-  transform:translateX(-50%) scale(1);
+  transform:translateX(-50%) translateY(0);
 }
+
+a.sponsor-card{transition:transform 0.2s ease,border-color 0.2s ease,box-shadow 0.2s ease;}
+a.sponsor-card:hover{
+  border-color:var(--volt);
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ===== Tournament photo carousel ===== */
+.carousel{flex:1;min-width:280px;max-width:480px;border-radius:8px;overflow:hidden;position:relative;}
+.carousel-track{display:flex;transition:transform 0.5s ease;height:320px;}
+.carousel-img{min-width:100%;width:100%;height:320px;object-fit:cover;flex-shrink:0;}
+.carousel-dots{display:flex;justify-content:center;gap:8px;padding:10px 0 4px;}
+.carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(212,255,61,0.35);cursor:pointer;border:none;transition:width 0.2s ease,background 0.2s ease;}
+.carousel-dot.active{width:18px;border-radius:4px;background:var(--volt);}
+.carousel-caption{font-family:'Space Mono',monospace;font-size:0.72rem;color:#C9CCDB;text-align:center;margin:6px 0 0;padding:0 8px;line-height:1.5;min-height:2.8em;transition:opacity 0.3s ease;}
+.carousel-caption.fading{opacity:0;}
+
+/* Equalise all past tournament card heights */
+.tournament-list .tournament-card-full{align-items:stretch;}
+.tournament-list .tournament-info{flex:1;}
