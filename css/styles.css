@@ -267,3 +267,56 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--smash-orange);outli
     text-align:justify;
   }
 }
+
+/* ===== Sponsor/partner hover cards ===== */
+
+/* Full sponsor cards (Sponsors + Partnerships pages) */
+a.sponsor-card{
+  transition:transform 0.22s ease,box-shadow 0.22s ease,border-color 0.22s ease,background 0.22s ease;
+}
+a.sponsor-card:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 24px 48px rgba(27,31,59,0.22),0 4px 12px rgba(27,31,59,0.1);
+  border-color:var(--volt);
+  background:var(--court-indigo);
+  color:var(--shuttle-white);
+}
+a.sponsor-card:hover h4{color:var(--volt);}
+a.sponsor-card:hover .sponsor-blurb{color:#C9CCDB;}
+
+/* Homepage/strip logo links — card pops up below the logo on hover */
+.strip-link{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  position:relative;
+  transition:transform 0.22s ease;
+}
+.strip-link:hover{transform:translateY(-5px);}
+
+.strip-link::after{
+  content:attr(data-name);
+  position:absolute;
+  top:calc(100% + 10px);
+  left:50%;
+  transform:translateX(-50%) scale(0.92);
+  transform-origin:top center;
+  background:var(--court-indigo);
+  color:var(--volt);
+  font-family:'Space Mono',monospace;
+  font-size:0.72rem;
+  font-weight:700;
+  padding:8px 14px;
+  border-radius:6px;
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.18s ease,transform 0.18s ease;
+  box-shadow:0 8px 20px rgba(27,31,59,0.25);
+  z-index:30;
+  letter-spacing:0.03em;
+}
+.strip-link:hover::after{
+  opacity:1;
+  transform:translateX(-50%) scale(1);
+}
