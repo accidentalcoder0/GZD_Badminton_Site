@@ -105,6 +105,10 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .announcement-card .date{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--line-grey);display:block;margin-top:10px;}
 .loading-msg,.error-msg{font-family:'Space Mono',monospace;color:var(--line-grey);}
 
+/* ===== Membership page ===== */
+.membership-image{display:block;max-width:600px;width:100%;margin:0 auto;border:2px solid var(--court-indigo);border-radius:8px;}
+.section-dark .membership-image{border-color:var(--volt);}
+
 /* ===== Tournament list (Tournaments page + homepage teaser) ===== */
 .tournament-list{display:flex;flex-direction:column;gap:18px;}
 .tournament-card-full{background:var(--court-indigo);border:2px solid var(--volt);border-radius:8px;padding:28px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;color:var(--shuttle-white);}
