@@ -332,5 +332,4 @@ a.sponsor-card:hover{
 /* ===== Instagram embed grid ===== */
 .instagram-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .instagram-grid .instagram-media{margin:0!important;min-width:0!important;width:100%!important;}
-@media(min-width:641px){.instagram-grid .instagram-media{height:504px!important;overflow:hidden!important;}}
 @media(max-width:640px){.instagram-grid{grid-template-columns:1fr;}}
