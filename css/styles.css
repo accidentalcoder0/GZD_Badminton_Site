@@ -128,9 +128,10 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .countdown-timer label{font-size:0.65rem;color:var(--line-grey);text-transform:uppercase;}
 
 /* ===== Sponsors ===== */
-.sponsor-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;align-items:center;}
+.sponsor-strip{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:48px;}
 .sponsor-slot{border:2px dashed var(--line-grey);border-radius:6px;height:90px;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--line-grey);text-align:center;padding:8px;}
-.sponsor-strip .sponsor-logo-img,.sponsor-strip .sponsor-slot{height:70px;width:100%;object-fit:contain;}
+.sponsor-strip .sponsor-logo-img{height:70px;width:auto;max-width:220px;object-fit:contain;}
+.sponsor-strip .sponsor-slot{width:220px;height:70px;flex:0 0 auto;}
 
 .sponsor-tier{margin-bottom:40px;}
 .sponsor-tier-name{font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:0.06em;color:var(--smash-orange);text-transform:uppercase;margin-bottom:18px;font-weight:700;}
