@@ -169,6 +169,10 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .contact-card{display:block;background:#fff;border:2px solid var(--court-indigo);border-radius:8px;padding:24px;}
 .contact-card:hover{border-color:var(--smash-orange);}
 .contact-card .dot{width:12px;height:12px;margin-bottom:14px;}
+.contact-card-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;margin-bottom:14px;color:var(--shuttle-white);}
+.contact-card-icon.icon-wa{background:#4ADE80;}
+.contact-card-icon.icon-ig{background:var(--smash-orange);}
+.contact-card-icon.icon-mail{background:var(--volt);color:var(--court-indigo);}
 .contact-card h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.1rem;margin-bottom:8px;}
 .contact-card p{margin:0;color:var(--line-grey);font-size:0.9rem;}
 .contact-form-embed{width:100%;height:600px;border:0;border-radius:8px;background:#fff;display:block;}
