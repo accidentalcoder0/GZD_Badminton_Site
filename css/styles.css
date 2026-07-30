@@ -133,6 +133,9 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .sponsor-strip .sponsor-logo-img{height:70px;width:auto;max-width:220px;object-fit:contain;}
 .sponsor-strip .sponsor-slot{width:220px;height:70px;flex:0 0 auto;}
 
+.sponsor-strip.partner-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;justify-content:normal;}
+.sponsor-strip.partner-strip .sponsor-logo-img{height:70px;width:100%;max-width:none;object-fit:contain;}
+
 .sponsor-tier{margin-bottom:40px;}
 .sponsor-tier-name{font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:0.06em;color:var(--smash-orange);text-transform:uppercase;margin-bottom:18px;font-weight:700;}
 .sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
