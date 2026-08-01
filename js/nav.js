@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
-  // Close menu when a nav link is tapped
+  // Close menu when a nav link is tapped (navigating away)
   nav.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       nav.classList.remove('nav-open');
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
 
 // ── Tournament photo carousels ──────────────────────────────────────────────
 document.querySelectorAll('.carousel').forEach(function (carousel) {
