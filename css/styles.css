@@ -111,8 +111,10 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 
 /* ===== Tournament list (Tournaments page + homepage teaser) ===== */
 .tournament-list{display:flex;flex-direction:column;gap:18px;}
-.tournament-card-full{background:var(--court-indigo);border:2px solid var(--volt);border-radius:8px;padding:28px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;color:var(--shuttle-white);}
+.tournament-card-full{background:var(--court-indigo);border:2px solid var(--volt);border-radius:8px;padding:28px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;color:var(--shuttle-white);position:relative;}
 .section-dark .tournament-card-full{border-color:rgba(212,255,61,0.4);}
+.tournament-corner-logo{position:absolute;bottom:14px;right:28px;height:150px;width:auto;max-width:340px;object-fit:contain;}
+.has-corner-logo .tournament-meta,.has-corner-logo .tournament-info>p{max-width:calc(100% - 220px);}
 .result-text{font-weight:700;margin-top:10px;}
 .result-pending{color:var(--line-grey);font-weight:400;font-style:italic;}
 
@@ -227,6 +229,11 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 
 @media (max-width:380px){
   .logo-img{height:22px;}
+}
+
+@media (max-width:600px){
+  .tournament-corner-logo{position:static;flex:0 0 100%;order:3;height:90px;max-width:200px;margin:14px auto 0;display:block;}
+  .has-corner-logo .tournament-meta,.has-corner-logo .tournament-info>p{max-width:none;}
 }
 
 /* ===== Reduced motion ===== */
