@@ -110,7 +110,7 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .announcement-card .announcement-image{flex:0 0 auto;width:200px;height:auto;align-self:stretch;object-fit:cover;margin:0;border:2px solid var(--court-indigo);border-radius:8px;}
 @media (max-width:640px){
   .announcement-card.announcement-with-image{flex-direction:column;}
-  .announcement-card .announcement-image{width:100%;max-width:280px;height:220px;align-self:center;margin-top:14px;}
+  .announcement-card .announcement-image{width:100%;max-width:240px;height:auto;object-fit:contain;align-self:center;margin-top:14px;}
 }
 .loading-msg,.error-msg{font-family:'Space Mono',monospace;color:var(--line-grey);}
 
