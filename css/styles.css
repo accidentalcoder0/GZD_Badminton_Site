@@ -312,6 +312,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--smash-orange);outli
 .result-2nd{color:#C9CCDB;}
 .result-3rd{color:#C9CCDB;font-weight:400;}
 .section-dark .result-2nd,.section-dark .result-3rd{color:#8A8FA3;}
+.result-category{font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--smash-orange);margin:14px 0 4px;}
+.result-category:first-child{margin-top:0;}
 
 /* ===== Leagues page grade cards ===== */
 .grades-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:28px;}
