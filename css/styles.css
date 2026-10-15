@@ -77,6 +77,8 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .btn-ghost:hover{background:var(--shuttle-white);color:var(--court-indigo);}
 .btn-outline-dark{border-color:var(--court-indigo);color:var(--court-indigo);background:transparent;}
 .btn-outline-dark:hover{background:var(--court-indigo);color:var(--shuttle-white);}
+.btn-bhf-red{border-color:#C8102E;color:#C8102E;}
+.btn-bhf-red:hover{background:#C8102E;color:var(--shuttle-white);}
 .btn-disabled{opacity:0.5;cursor:not-allowed;width:100%;margin-top:14px;}
 .btn-disabled-inline{opacity:0.5;cursor:not-allowed;}
 
@@ -105,12 +107,14 @@ h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:0.02em;margin:0;text-tran
 .announcement-card .tag{font-family:'Space Mono',monospace;font-size:0.7rem;background:var(--volt);color:var(--court-indigo);padding:2px 8px;border-radius:3px;display:inline-block;margin-bottom:10px;font-weight:700;}
 .announcement-card h4{margin:0 0 8px;font-size:1rem;font-weight:800;}
 .announcement-card .date{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--line-grey);display:block;margin-top:10px;}
-.announcement-card.announcement-with-image{display:flex;gap:20px;align-items:stretch;}
+.announcement-card.announcement-with-image{display:flex;gap:24px;align-items:center;}
 .announcement-content{flex:1 1 auto;min-width:0;}
-.announcement-card .announcement-image{flex:0 0 auto;width:200px;height:auto;align-self:stretch;object-fit:cover;margin:0;border:2px solid var(--court-indigo);border-radius:8px;}
+.announcement-image-link{flex:0 0 auto;display:block;width:280px;max-width:38%;}
+.announcement-card .announcement-image{display:block;width:100%;height:auto;object-fit:contain;border:2px solid var(--court-indigo);border-radius:8px;transition:opacity 0.15s ease;}
+.announcement-image-link:hover .announcement-image{opacity:0.85;}
 @media (max-width:640px){
   .announcement-card.announcement-with-image{flex-direction:column;}
-  .announcement-card .announcement-image{width:100%;max-width:240px;height:auto;object-fit:contain;align-self:center;margin-top:14px;}
+  .announcement-image-link{width:100%;max-width:280px;align-self:center;}
 }
 .loading-msg,.error-msg{font-family:'Space Mono',monospace;color:var(--line-grey);}
 
